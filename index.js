@@ -15,8 +15,6 @@ app.get("/api/flights/promotion", (req, res) => {
     flights[i] = [];
 
     for (let index = 0; index < 10; index++) {
-      const type = Math.random() < 0.5 ? "outgoing" : "return";
-
       flights[i].push({
         origin: "FRA",
         destination: "FCO",
@@ -35,7 +33,6 @@ app.get("/api/flights/promotion", (req, res) => {
         },
         offerType: "BestPrice",
         uuid: v4(),
-        type,
       });
     }
   }
